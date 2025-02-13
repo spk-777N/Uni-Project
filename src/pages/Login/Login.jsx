@@ -95,7 +95,7 @@ function Login() {
                                         </Link>
                                     </div>
                                 </Typography>
-                                <div className="submit">
+                                <div className="login">
                                     <Button id="submit" variant="contained" type="submit">Login</Button>
                                     <Typography>
                                         <p>

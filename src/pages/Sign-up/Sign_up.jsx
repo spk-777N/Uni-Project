@@ -165,7 +165,7 @@ function Sign_up() {
                                 </FormControl>
                             </div>
 
-                            <div className="submit">
+                            <div className="Sign-up">
                                 <Button className="submit" variant="contained" type="submit">Sign Up</Button>
                                 <Typography>
                                     <p>

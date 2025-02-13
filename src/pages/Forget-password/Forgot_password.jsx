@@ -71,7 +71,7 @@ function Forgot_password() {
                                         helperText={errors.email}
                                     />
                                 </div>
-                                <div className="submit">
+                                <div className="reset-pass">
                                     <Button id="submit" variant="contained" type="submit">Reset password</Button>
                                     <Typography>
                                         <p>
