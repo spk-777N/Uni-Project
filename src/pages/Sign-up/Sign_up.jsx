@@ -1,31 +1,23 @@
 import React, { useState } from "react";
 import { TextField, Button, Container, Typography, Box, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 import "./Sign_up.css";
-
-
+import GoogleIcon from '@mui/icons-material/Google';
 
 function Sign_up() {
+
 
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
-        first_name: "",
-        last_name: "",
-        username: "",
+        firstName: "",
+        lastName: "",
+        userName: "",
         email: "",
-        password: "",
-        role: ""
+        password: ""
     });
 
     const [errors, setErrors] = useState({});
-
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,36 +25,14 @@ function Sign_up() {
     };
 
 
-
-    const validate = () => {
-        let tempErrors = {};
-        tempErrors.first_name = formData.first_name ? "" : "First name is required";
-        tempErrors.last_name = formData.last_name ? "" : "Last name is required";
-        tempErrors.username = formData.username ? "" : "Username is required";
-        tempErrors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) ? "" : "Valid email is required";
-        tempErrors.password = formData.password.length >= 6 ? "" : "Password must be at least 6 characters";
-        tempErrors.role = formData.role ? "" : "Role is required";
-
-        setErrors(tempErrors);
-        return Object.values(tempErrors).every((x) => x === "");
-    };
-
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validate()) {
-            console.log("Signup successful", formData);
-        }
-    };
-
-
     return (
         <div id="main-div">
-            {/* section 2 */}
+
+            {/* section 1 */}
             <div id="section-1">
                 <div>
                     <div id="title">
-                        <Typography variant="p">Test.</Typography>
+                        <Typography variant="p">Doctor Appointment Booking.</Typography>
                     </div>
                     <div id="paragraph">
                         <Typography variant="p">
@@ -80,45 +50,45 @@ function Sign_up() {
                         <Typography className="logo" variant="h2">
                             Sign Up
                         </Typography>
-                        <form className="form" action="sign-up.php" method="POST" onSubmit={handleSubmit}>
+                        <form className="form" action="sign-up.php" method="POST">
                             <div>
                                 <TextField
-                                    name="first_name"
+                                    name="firstName"
                                     id="firs-name"
                                     label="First Name"
                                     variant="outlined"
                                     required
-                                    value={formData.first_name}
+                                    value={formData.firstName}
                                     onChange={handleChange}
-                                    error={!!errors.first_name}
-                                    helperText={errors.first_name}
+                                    error={!!errors.firstName}
+                                    helperText={errors.firstName}
                                 />
                             </div>
 
                             <div>
                                 <TextField
+                                    name="lastName"
                                     id="last-name"
                                     label="Last Name"
-                                    name="last_name"
                                     variant="outlined"
                                     required
-                                    value={formData.last_name}
+                                    value={formData.lastName}
                                     onChange={handleChange}
-                                    error={!!errors.last_name}
-                                    helperText={errors.last_name}
+                                    error={!!errors.lastName}
+                                    helperText={errors.lastName}
                                 />
                             </div>
                             <div>
                                 <TextField
+                                    name="userName"
                                     id="username"
                                     label="Username"
-                                    name="username"
                                     variant="outlined"
                                     required
-                                    value={formData.username}
+                                    value={formData.userName}
                                     onChange={handleChange}
-                                    error={!!errors.username}
-                                    helperText={errors.username}
+                                    error={!!errors.userName}
+                                    helperText={errors.userName}
 
                                 />
                             </div>
@@ -150,32 +120,20 @@ function Sign_up() {
                                 helperText={errors.password}
                             />
                             </div>
-                            <div>
-                                <FormControl id="radio-role">
-                                    <FormLabel required >Role</FormLabel>
-                                    <RadioGroup
-                                        row
-                                        name="role"
-                                        value={formData.role}
-                                        onChange={handleChange}
-                                    >
-                                        <FormControlLabel value="doctor" control={<Radio />} label="Doctor" />
-                                        <FormControlLabel value="patient" control={<Radio />} label="Patient" />
-                                    </RadioGroup>
-                                </FormControl>
-                            </div>
-
                             <div className="Sign-up">
-                                <Button className="submit" variant="contained" type="submit">Sign Up</Button>
-                                <Typography>
-                                    <p>
-                                        Already Have An Account?<span>   </span>
-                                        <Link className="route-login"
-                                            onClick={() => navigate("/login")}
-                                            underline="none">
-                                            Login
-                                        </Link>
-                                    </p>
+                                <div className="buttons">
+                                    <Button className="signup-b" variant="contained" type="submit">Sign Up</Button>
+                                    <a className="google-link" href="http://localhost/google"><Button className="google-signup" variant="contained"><GoogleIcon /></Button>
+                                    </a>
+                                </div>
+                                <Typography variant="p" className="go-login">
+                                    Already Have An Account?<span>   </span>
+                                    <Link className="route-login"
+                                        onClick={() => navigate("/login")}
+                                        underline="none">
+                                        Login
+                                    </Link>
+
                                 </Typography>
                             </div>
                         </form>

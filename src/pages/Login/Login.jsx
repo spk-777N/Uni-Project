@@ -2,6 +2,9 @@ import "./Login.css"
 import React, { useState } from "react";
 import { TextField, Button, Container, Typography, Box, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import GoogleIcon from '@mui/icons-material/Google';
+
+
 
 
 function Login() {
@@ -20,29 +23,14 @@ function Login() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const validate = () => {
-        let tempErrors = {};
-        tempErrors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) ? "" : "Valid email is required";
-        tempErrors.password = formData.password.length >= 6 ? "" : "Password must be at least 6 characters";
-
-        setErrors(tempErrors);
-        return Object.values(tempErrors).every((x) => x === "");
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validate()) {
-            console.log("Signup successful", formData);
-        }
-    };
 
     return (
         <div>
             <div id="main-div">
                 <div id="section-1">
                     <div>
-                        <div id='title'>
-                            <Typography variant="p">Test.</Typography>
+                        <div id="title">
+                            <Typography variant="p">Doctor Appointment Booking.</Typography>
                         </div>
                         <div id="paragraph">
                             <Typography variant="p">
@@ -52,14 +40,16 @@ function Login() {
                         </div>
                     </div>
                 </div>
+
                 {/* section two */}
+
                 <div id="section-2">
                     <Container className='container'>
                         <Box id="box">
                             <Typography className="logo" variant="h2">
                                 Login
                             </Typography>
-                            <form className="form" action="login.php" method="POST" onSubmit={handleSubmit}>
+                            <form className="form" action="login.php" method="POST" /*onSubmit={handleSubmit} */>
                                 <div>
                                     <TextField
                                         name="email"
@@ -86,26 +76,19 @@ function Login() {
                                         helperText={errors.password}
                                     />
                                 </div>
-                                <Typography>
-                                    <div className="forgot-pass">
-                                        <Link className="forgot-pass-l"
-                                            onClick={() => navigate("/forgot-password")}
-                                            underline="none">
-                                            Forgot Password
-                                        </Link>
-                                    </div>
-                                </Typography>
                                 <div className="login">
-                                    <Button id="submit" variant="contained" type="submit">Login</Button>
-                                    <Typography>
-                                        <p>
-                                            Don't have an account yet?<span>   </span>
-                                            <Link className="route-login"
-                                                onClick={() => navigate("/sign-up")}
-                                                underline="none">
-                                                Sign Up
-                                            </Link>
-                                        </p>
+                                    <div className="buttons">
+                                        <Button className="signup-b" variant="contained" type="submit">Sign Up</Button>
+                                        <a className="google-link" href="http://localhost/google"><Button className="google-signup" variant="contained"><GoogleIcon /></Button>
+                                        </a>
+                                    </div>
+                                    <Typography variant="p" className="go-signup">
+                                        Don't have an account yet?<span>   </span>
+                                        <Link className="route-login"
+                                            onClick={() => navigate("/sign-up")}
+                                            underline="none">
+                                            Sign Up
+                                        </Link>
                                     </Typography>
                                 </div>
                             </form>
