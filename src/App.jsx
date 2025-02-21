@@ -1,16 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login/Login"
-import Forgot_password from './pages/Forget-password/Forgot_password';
 import Sign_up from './pages/Sign-up/Sign_up';
+import Home from './pages/Home/Home'
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/forgot-password" element={<Forgot_password />} />
+        <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<Sign_up />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/google" />
       </Routes>
     </BrowserRouter>
   )

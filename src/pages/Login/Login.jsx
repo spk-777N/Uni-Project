@@ -34,7 +34,7 @@ function Login() {
                         </div>
                         <div id="paragraph">
                             <Typography variant="p">
-                                Welcom.<br />
+                                Welcome.<br />
                                 Start your journey now with our managment system!
                             </Typography>
                         </div>

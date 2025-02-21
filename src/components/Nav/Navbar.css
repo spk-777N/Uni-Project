@@ -1,0 +1,47 @@
+.main-div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: solid 1px;
+}
+
+.site-logo p {
+    font-size: 25px;
+    color: #3C39AB;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.pages {
+    margin: 0 20px;
+}
+
+.pages-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.pages-list li:hover {
+    color: #3C39AB;
+    cursor: pointer;
+}
+
+
+
+.sign-login {
+    display: flex;
+    gap: 20px;
+}
+
+.sign-login button {
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: #3C39AB;
+}
