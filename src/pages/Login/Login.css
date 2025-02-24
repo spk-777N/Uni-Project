@@ -92,10 +92,14 @@ form div {
     width: 250px;
     font-size: 23px;
     height: 55px;
+    background-color: #3C39AB;
+    border-radius: 50px;
 }
 
 .login .buttons .google-signup {
     height: 55px;
+    background-color: #3C39AB;
+    border-radius: 50px;
 }
 
 a {
