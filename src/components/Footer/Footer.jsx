@@ -13,6 +13,7 @@ const Footer = () => {
                     <p className='footer-logo'>
                         Doctor Appointment Booking
                     </p>
+                    {/* Description*/}
                     <p className='footer-summary'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when <br /> an unknown printer took a galley of type and scrambled it to make a type <br /> specimen book.
                     </p>
