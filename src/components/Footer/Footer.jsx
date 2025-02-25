@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='footer-p1'>
                 <div className='summary'>
                     <p className='footer-logo'>
-                        Doctor Appointment Booking
+                        c
                     </p>
                     {/* Description*/}
                     <p className='footer-summary'>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-p2-cp'>
-                Copyright &copy; 2024 GreatStack - All Right Reserved.
+                Copyright &copy; 2025 Test - All Right Reserved.
             </div>
         </div>
     )
