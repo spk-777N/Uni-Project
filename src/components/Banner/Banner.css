@@ -1,6 +1,6 @@
-.dicription-section {
-    /* background-color: #3C39AB; */
+.banner-div {
     background-image: linear-gradient(225deg, #3C39AB, #651fff);
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,6 +9,7 @@
     border-radius: 10px;
     padding: 0 80px;
     font-family: Arial, Helvetica, sans-serif;
+    height: 600px;
 
     ::selection {
         background-color: blue;
@@ -16,23 +17,12 @@
     }
 }
 
-
-
-.p-1 {
+.banner-p-b p {
     color: white;
     font-size: 65px;
 }
 
-
-.p-2 {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 30px;
-}
-
-
-.p-2 button {
+.banner-p-b button {
     font-size: 25px;
     border-radius: 50px;
     text-align: center;
@@ -43,10 +33,14 @@
     margin-bottom: 20px;
 }
 
-.p-2 .booking-button .nav-icon {
-    font-size: 40px;
+.banner-p-b button:hover {
+    background-color: #9e9e9e;
 }
 
-.p-2 button:hover {
-    background-color: #9e9e9e;
+.appointment-img {
+    position: absolute;
+    height: 107%;
+    bottom: 0;
+    right: 0;
+    margin: 0 80px;
 }

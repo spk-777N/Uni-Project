@@ -5,6 +5,7 @@ import Sign_up from './pages/Sign-up/Sign_up';
 import Home from './pages/Home/Home'
 import Doctors from './pages/Doctors/Doctors';
 import Navbar from './components/Nav/Navbar';
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/doctors/:' element={<Doctors />} />
         <Route path="/google" />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

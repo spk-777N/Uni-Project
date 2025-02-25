@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import { React, Fragment } from 'react'
 import Description from '../../components/Description/Description'
 import SpecialityMenu from '../../components/SpecialityMenu/SpecialityMenu'
+import Banner from '../../components/Banner/Banner'
 import './Home.css'
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <Fragment>
             <Description />
             <SpecialityMenu />
+            <Banner />
         </Fragment>
     )
 }

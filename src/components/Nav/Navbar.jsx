@@ -8,7 +8,7 @@ function Navbar() {
     const navigate = useNavigate();
 
     return (
-        <div className='main-div'>
+        <div className='main-nav-div'>
             <div className='site-logo'>
                 <p onClick={() => navigate('/')}>Doctor Appointment Booking</p>
             </div>

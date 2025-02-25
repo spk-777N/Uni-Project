@@ -6,6 +6,11 @@
     justify-content: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+
+    ::selection {
+        background-color: #3C39AB;
+        color: white;
+    }
 }
 
 .description-div .Speciality-p-1 {
