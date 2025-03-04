@@ -11,9 +11,8 @@ const Footer = () => {
             <div className='footer-p1'>
                 <div className='summary'>
                     <p className='footer-logo'>
-                        c
+                        Doctor Appointment Booking
                     </p>
-                    {/* Description*/}
                     <p className='footer-summary'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when <br /> an unknown printer took a galley of type and scrambled it to make a type <br /> specimen book.
                     </p>
@@ -31,7 +30,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-p2-cp'>
-                Copyright &copy; 2025 Test - All Right Reserved.
+                Copyright &copy; 2024 GreatStack - All Right Reserved.
             </div>
         </div>
     )

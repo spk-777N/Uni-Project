@@ -7,10 +7,9 @@
     justify-content: space-between;
     margin: 30px 0;
     border-radius: 10px;
-    padding: 0 80px;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 100px 80px 0;
-    
+    font-family: Arial, Helvetica, sans-serif;
+
     ::selection {
         background-color: blue;
         color: white;
