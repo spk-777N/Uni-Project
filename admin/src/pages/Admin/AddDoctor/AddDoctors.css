@@ -1,0 +1,108 @@
+form {
+    margin: 20px;
+    width: 70%;
+}
+
+.title-p {
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.add-doctor-div {
+    height: 75%;
+    background-color: white;
+    padding: 20px 20px 20px 30px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.doc-img-div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: gray;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.doc-img-div img {
+    width: 100px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.left-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+
+.right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.data-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-field input {
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.data-field select {
+    width: 73%;
+    height: 64px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.data-field p {
+    font-size: 22px;
+}
+
+.address div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data-field textarea {
+    height: 150px;
+    width: 75%;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.textarea {
+    margin: 10px 0 40px;
+}
+
+.add-doc Button {
+    font-size: 22px;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    background-color: #3C39AB;
+    margin-bottom: 70px;
+}
