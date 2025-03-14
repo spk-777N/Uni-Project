@@ -1,5 +1,6 @@
 .main-nav-div {
     margin-top: 10px;
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -7,6 +8,7 @@
     text-align: center;
     border-bottom: solid 1px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 
     ::selection {
         background-color: #3C39AB;
@@ -14,40 +16,28 @@
     }
 }
 
-.site-logo p {
-    font-size: 25px;
-    color: #3C39AB;
-    font-weight: 600;
-    cursor: pointer;
-}
 
-
-.pages {
-    margin: 0 20px;
-}
-
-.pages-list {
+.dashboard-banner {
     display: flex;
-    flex-direction: row;
-    gap: 40px;
-    list-style: none;
-    font-size: 20px;
-}
+    gap: 15px;
+    margin: 0 0 10px 0;
 
-.pages-list li:hover {
-    color: #3C39AB;
-    cursor: pointer;
 }
 
 
-
-.sign-login {
-    display: flex;
-    gap: 20px;
+.dashboard-banner img {
+    width: 200px;
 }
 
-.sign-login button {
+.dashboard-banner p {
+    padding: 6px;
+    border: solid 3px gray;
+    border-radius: 25px;
+}
+
+
+.main-nav-div button {
     font-size: 18px;
-    border-radius: 50px;
+    border-radius: 25px;
     background-color: #3C39AB;
 }

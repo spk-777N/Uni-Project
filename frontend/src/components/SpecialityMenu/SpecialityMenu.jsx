@@ -16,7 +16,7 @@ const SpecialityMenu = () => {
             </div>
             <div className='medical-specialties'>
                 {specialityData.map((item, index) => (
-                    <div key={index} className={item.speciality} onClick={() => navigate(`/doctors/${item.speciality}`)}>
+                    <div key={index} className={item.speciality} onClick={() => { navigate(`/doctors/${item.speciality}`); window.scrollTo({ top: 0 }) }}>
                         <img src={item.image} alt='...' />
                         <p>{item.speciality}</p>
                     </div>

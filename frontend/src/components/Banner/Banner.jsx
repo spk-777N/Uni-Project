@@ -15,7 +15,7 @@ const Banner = () => {
                 <p>Book Appointment<br />With 100+ Trusted Doctors</p>
                 <Button variant='contained' className='create-account-b' onClick={() => navigate('/sign-up')}>Create account</Button>
             </div>
-            <img src={assets.appointment} alt='...' className='appointment-img' />
+            <img src={assets.appointment_img} alt='...' className='appointment-img' />
         </div>
     )
 }

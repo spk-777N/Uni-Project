@@ -1,0 +1,70 @@
+.doctors-list-main-div {
+    margin: 20px;
+    width: 80%;
+}
+
+.doctors-list-title {
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.doctors-list-div {
+    height: 80%;
+    /* background-color: white; */
+    padding: 20px 20px 20px 30px;
+    /* border: solid 1px gray; */
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.doctor-card {
+    border: solid grey 1px;
+    border-radius: 12px;
+    height: 575px;
+}
+
+.doctor-card:hover {
+    cursor: pointer;
+}
+
+.doctor-card img {
+    background-color: #6471ff;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.doctor-card:hover img {
+    background-color: #0b1cd8;
+    transition-duration: 0.4s;
+}
+
+.doc-name-speciality {
+    padding: 0 15px;
+}
+
+.doc-name {
+    font-size: 30px;
+}
+
+.doc-speciality {
+    font-size: 22px;
+    color: gray;
+    margin: -25px 0 10px 0;
+
+}
+
+.availabe-div {
+    display: flex;
+    gap: 3px;
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+}
+
+.availabe-div input,
+label:hover {
+    cursor: pointer;
+}

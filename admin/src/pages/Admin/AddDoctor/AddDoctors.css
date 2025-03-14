@@ -11,6 +11,7 @@ form {
 
 .add-doctor-div {
     height: 75%;
+    width: 100%;
     background-color: white;
     padding: 20px 20px 20px 30px;
     border: solid 1px gray;
@@ -35,6 +36,7 @@ form {
 }
 
 .main-section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -62,7 +64,7 @@ form {
 }
 
 .data-field input {
-    width: 70%;
+    width: 100%;
     height: 40px;
     padding: 10px;
     font-size: 20px;
@@ -70,7 +72,7 @@ form {
 }
 
 .data-field select {
-    width: 73%;
+    width: 104%;
     height: 64px;
     padding: 10px;
     font-size: 20px;
@@ -89,7 +91,7 @@ form {
 
 .data-field textarea {
     height: 150px;
-    width: 75%;
+    width: 160%;
     font-size: 25px;
     padding: 10px;
 }
@@ -101,7 +103,7 @@ form {
 .add-doc Button {
     font-size: 22px;
     height: 70px;
-    width: 250px;
+    width: 60%;
     border-radius: 50px;
     background-color: #3C39AB;
     margin-bottom: 70px;
