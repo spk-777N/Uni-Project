@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { React, useState } from "react";
 import { TextField, Button, Container, Typography, Box, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./Sign_up.css";
-import GoogleIcon from '@mui/icons-material/Google';
+import GoogleIcon from "@mui/icons-material/Google";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 function Sign_up() {
-
-
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -14,7 +14,7 @@ function Sign_up() {
         lastName: "",
         userName: "",
         email: "",
-        password: ""
+        password: "",
     });
 
     const [errors, setErrors] = useState({});
@@ -24,10 +24,39 @@ function Sign_up() {
         setFormData({ ...formData, [name]: value });
     };
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setErrors({}); // إعادة تعيين الأخطاء
+
+
+        try {
+            const response = await axios.post("http://localhost:3000/signup", formData)
+            const { data } = response
+
+
+            if (data.message === "success") {
+                toast.success("Sign up successful!");
+                navigate("/login");
+                console.log(data)
+                console.log("success")
+            } else {
+                toast.error("user already exists")
+                // console.log(data.message)
+                navigate("/login");
+            }
+        } catch (error) {
+            console.log(error)
+            if (error.response.data.message === "user already exists") {
+                toast.success(error.response.data.message)
+                navigate("/login");
+            } else {
+                toast.error(error.response.data.message)
+            }
+        }
+    };
 
     return (
         <div id="main-div">
-
             {/* section 1 */}
             <div id="section-1">
                 <div>
@@ -36,8 +65,8 @@ function Sign_up() {
                     </div>
                     <div id="paragraph">
                         <Typography variant="p">
-                            Welcom.<br />
-                            Start your journey now with our managment system!
+                            Welcome.<br />
+                            Start your journey now with our management system!
                         </Typography>
                     </div>
                 </div>
@@ -50,11 +79,11 @@ function Sign_up() {
                         <Typography className="logo" variant="h2">
                             Sign Up
                         </Typography>
-                        <form className="form" action="sign-up.php" method="POST">
+                        <form className="form" onSubmit={handleSubmit}>
                             <div>
                                 <TextField
                                     name="firstName"
-                                    id="firs-name"
+                                    id="first-name"
                                     label="First Name"
                                     variant="outlined"
                                     required
@@ -78,6 +107,7 @@ function Sign_up() {
                                     helperText={errors.lastName}
                                 />
                             </div>
+
                             <div>
                                 <TextField
                                     name="userName"
@@ -89,10 +119,8 @@ function Sign_up() {
                                     onChange={handleChange}
                                     error={!!errors.userName}
                                     helperText={errors.userName}
-
                                 />
                             </div>
-
 
                             <div>
                                 <TextField
@@ -108,42 +136,49 @@ function Sign_up() {
                                 />
                             </div>
 
-                            <div> <TextField
-                                required
-                                id="password"
-                                label="Password"
-                                name="password"
-                                variant="outlined"
-                                value={formData.password}
-                                onChange={handleChange}
-                                error={!!errors.password}
-                                helperText={errors.password}
-                            />
+                            <div>
+                                <TextField
+                                    required
+                                    id="password"
+                                    label="Password"
+                                    name="password"
+                                    variant="outlined"
+                                    type="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    error={!!errors.password}
+                                    helperText={errors.password}
+                                />
                             </div>
+
                             <div className="Sign-up">
                                 <div className="buttons">
-                                    <Button className="signup-b" variant="contained" type="submit">Sign Up</Button>
-                                    <a className="google-link" href="http://localhost/google"><Button className="google-signup" variant="contained"><GoogleIcon /></Button>
+                                    <Button className="signup-b" variant="contained" type="submit">
+                                        Sign Up
+                                    </Button>
+                                    <a className="google-link" href="http://localhost/google">
+                                        <Button className="google-signup" variant="contained">
+                                            <GoogleIcon />
+                                        </Button>
                                     </a>
                                 </div>
                                 <Typography variant="p" className="go-login">
-                                    Already Have An Account?<span>   </span>
-                                    <Link className="route-login"
+                                    Already Have An Account?<span> </span>
+                                    <Link
+                                        className="route-login"
                                         onClick={() => navigate("/login")}
-                                        underline="none">
+                                        underline="none"
+                                    >
                                         Login
                                     </Link>
-
                                 </Typography>
                             </div>
                         </form>
-
                     </Box>
                 </Container>
-
             </div>
         </div>
-    )
+    );
 }
 
-export default Sign_up
+export default Sign_up;

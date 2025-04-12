@@ -1,18 +1,17 @@
-import React, { Fragment, useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Doctors.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AppContext } from '../../context/AppContext'
+import { assets } from '../../assets/assets'
 
 const Doctors = () => {
 
 
     const navigate = useNavigate()
-
     const { speciality } = useParams()
-
     const [filterDoc, SetFilterDoc] = useState([])
-
     const { doctors } = useContext(AppContext)
+
 
 
     const applyFilter = () => {
@@ -75,13 +74,13 @@ const Doctors = () => {
                 <div className='doctors-div'>
                     {
                         filterDoc.map((item, index) => (
-                            <div className='doctor-card-h' onClick={() => navigate(`/appointment/${item._id}`)}>
-                                <img src={item.image} alt='...' />
+                            <div key={index} className='doctor-card-h' onClick={() => navigate(`/appointment/${item._id}`)}>
+                                <img src={item.image || assets.doc1} alt={assets.upload_icon} />
                                 <div className='details'>
                                     <div className='available-circle'>
                                         <p className='green-c'></p><p>Available</p>
                                     </div>
-                                    <p className='doc-name'>{item.name}</p>
+                                    <p className='doc-name'>{item.userId.firstName} {item.userId.lastName}</p>
                                     <p className='doc-speciality'>{item.speciality}</p>
                                 </div>
                             </div>
@@ -89,7 +88,7 @@ const Doctors = () => {
                     }
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

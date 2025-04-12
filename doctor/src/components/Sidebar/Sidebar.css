@@ -1,0 +1,49 @@
+.sidebar-div {
+    /* position: absolute; */
+    display: flex;
+    width: 35vh;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    border-right: solid 1px;
+    margin-right: 25px;
+}
+
+
+.dashboard-list {
+    margin-top: 20px;
+}
+
+
+
+.dashboard-list .nav-link {
+    display: flex;
+    text-align: center;
+    margin-left: -8px;
+    padding-left: 35px;
+    gap: 15px;
+    flex-direction: row;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.nav-link.active {
+    display: flex;
+    text-align: center;
+    margin-left: -8px;
+    padding-left: 35px;
+    gap: 15px;
+    flex-direction: row;
+    background-color: #F2F3FF;
+    font-size: 25px;
+    text-decoration: none;
+    color: #3C39AB;
+    border-right: solid #3C39AB 7px;
+}
+
+.dashboard-list .nav-link:hover {
+    background-color: #F2F3FF;
+}

@@ -116,26 +116,26 @@ const Appointment = () => {
             {/* doctor details */}
             <div className='main-doc-details-div'>
                 <div className='doc-img-div'>
-                    <img src={docInfo.image} alt='...' />
+                    <img src={docInfo.image || assets.doc1} alt='...' />
                 </div>
                 <div className='doc-details-booking'>
                     <div className='doc-details'>
                         {/* Doc Info : name , degree , experience */}
                         <p className='name-details'>
-                            {docInfo.name} <img src={assets.verified_icon} alt='...' />
+                            {docInfo.userId.firstName} {docInfo.userId.lastName} <img src={assets.verified_icon} alt='...' />
                         </p>
                         <div className='deg-spe-exp'>
                             <p>{docInfo.degree} - {docInfo.speciality}</p>
-                            <button>{docInfo.experience}</button>
+                            <button>{docInfo.experience} Years</button>
                         </div>
                         <div className='about-details'>
                             <p>
                                 About <img src={assets.info_icon} alt='...' />
                             </p>
-                            <p className='about-p'>{docInfo.about}</p>
+                            <p className='about-p'>{docInfo.aboutDoctor}</p>
                         </div>
                         <div className='fee-details'>
-                            <p>Appointement fee:<span>{currencySymbol}{docInfo.fees}</span></p>
+                            <p>Appointement fee: <span>{currencySymbol}{docInfo.fees}</span></p>
                         </div>
                     </div>
 

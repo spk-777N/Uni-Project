@@ -26,10 +26,10 @@ const Sidebar = () => {
         {
           // authHeader &&
           <Fragment>
-            <NavLink className='nav-link' onClick={() => { setActiveClass() }} to={'/admin-dashboard'}>
+            {/* <NavLink className='nav-link' onClick={() => { setActiveClass() }} to={'/admin-dashboard'}>
               <img src={assets.home_icon} alt='...' />
               <p>Dashboard</p>
-            </NavLink>
+            </NavLink> */}
 
             <NavLink className='nav-link' to={'/all-appointments'}>
               <img src={assets.appointment_icon} alt='...' />

@@ -20,7 +20,7 @@ const AdminContextProvider = (props) => {
 
         try {
 
-            const { data } = await axios.post(backendUrl + '/admin/all-doctors', {}, { headers: { authHeader } })
+            const { data } = await axios.post('http://localhost:3000/admin/doctors/allDoctors', {}, { headers: { authHeader } });
             if (data.success) {
                 setDoctors(data.doctors)
                 console.log(data.doctors)
@@ -31,6 +31,7 @@ const AdminContextProvider = (props) => {
             toast.error(error.message)
         }
     }
+
 
 
 
@@ -53,10 +54,47 @@ const AdminContextProvider = (props) => {
 
     }
 
+    //  All Appointments if will use it
+    // const [appointments, setAppointments] = useState([])
+    // const getAllAppointments = async () => {
+    //     try {
+    //         const { data } = await axios.get(backendUrl, { headers: { authHeader } });
+    // if (data.success) {
+    // setAppointments(data.appointments)
+    // } else {
+    // toast.error(data.message)
+    // }
+    //     } catch (error) { 
+    // toast.error(error.message)
+    //     }
+    // }
+
+
+    // get admin dashboard data and save it
+    // const [dashData, setDashData] = useState(false)
+    // const getDashData = async () => {
+    //     try {
+
+    //         const { data } = await axios.get("backendUrl", { headers: { authHeader } })
+    //         const { data } = "test";
+
+    //         if (data.success) {
+    //             setDashData(data.dashData)
+    //         } else {
+    //             toast.error(data.message)
+    //         }
+    //     }
+    // }
+
+
+
     const value = {
         authHeader, setAuthHeader,
         getAllDoctors, doctors,
         changeAvailability,
+        // appointments, setAppointments,
+        // getAllAppointments,
+        // dashData, getDashData
     }
 
 

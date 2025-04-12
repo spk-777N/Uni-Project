@@ -1,99 +1,229 @@
-.myprofile-main-div,
-.user-name-input-div {
-    margin-top: 50px;
-    width: 50%;
+/* إعادة ضبط التنسيقات الأساسية */
+.myprofile-main-div {
+    margin: 40px 20px;
+    width: 100%;
+    max-width: 600px;
+    /* الحد الأقصى للعرض */
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* محاذاة إلى اليسار */
+    gap: 50px;
 }
 
+/* تنسيق الصورة */
+.myprofile-main-div img {
+    width: 250px;
+    height: 250px;
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+
+/* تنسيق اسم المستخدم وعناصر الإدخال */
+.user-name-input-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    /* محاذاة إلى اليسار */
+}
+
+.user-name-input-div hr,
 .myprofile-main-div hr {
-    margin: -15px 0 30px;
-}
-
-.user-name-input-div hr {
-    margin: 15px 0 30px;
     width: 200%;
-
-}
-
-.user-name-input-div input {
-    margin-top: -25px;
-    border-radius: 6px;
+    max-width: 400px;
+    /* ضبط عرض الخط الأفقي */
+    margin: 10px 0;
+    border: 1px solid #000000;
 }
 
 .user-name {
-    font-size: 35px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
 }
 
 .user-name-input {
-    font-size: 35px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-.user-phone-input-div {
-    align-items: center;
-    justify-content: center;
-
+.user-name-input:focus {
+    border-color: #6c63ff;
+    /* لون مشابه للأزرار في الصورة */
 }
 
-.user-phone-input-div input {
-    font-size: 20px;
-    border-radius: 6px;
+/* تنسيق قسم المعلومات */
+.user-details,
+.basic-info-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
-
-.user-addres-input-div input {
-    font-size: 20px;
-    border-radius: 6px;
-}
-
-.user-gender-s-div select {
-    font-size: 20px;
-    border-radius: 6px;
-}
-
-.user-birthday-input-div input {
-    font-size: 20px;
-    border-radius: 6px;
-}
-
 
 .contact-info,
 .basic-info {
     font-size: 20px;
-    text-decoration: underline;
-
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0;
+    text-decoration: none;
+    /* إزالة التسطير لتكون مشابهة للصورة */
 }
 
 .user-email-div,
-.user-phone-div,
 .user-address-div,
 .user-gender-div,
 .user-birthday-div {
     display: flex;
-    gap: 75px;
-    font-size: 20px;
     align-items: center;
-
-}
-
-.user-email,
-.user-phone {
-    color: blue;
-}
-
-.edit-button Button {
-    width: 150px;
-    margin-top: 10px;
     font-size: 22px;
-    height: 50px;
-    background-color: #3C39AB;
-    border-radius: 50px;
+    margin-top: 15px;
+    color: #333;
+    gap: 15px;
 }
 
-.save-info-button Button {
-    width: 260px;
-    margin-top: 40px;
-    font-size: 22px;
-    height: 50px;
-    background-color: #3C39AB;
-    border-radius: 50px;
+.user-email-div p,
+.user-address-div p,
+.user-gender-div p,
+.user-birthday-div p {
+    margin: 0;
+    width: 120px;
+    /* عرض ثابت للنصوص لضمان المحاذاة */
+    font-weight: 500;
+}
 
+.user-email {
+    color: #6c63ff;
+    /* لون مشابه للصورة */
+    font-weight: 400;
+}
+
+.user-address-div input,
+.user-gender-div select,
+.user-birthday-div input {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.user-address-div input:focus,
+.user-gender-div select:focus,
+.user-birthday-div input:focus {
+    border-color: #6c63ff;
+}
+
+.user-gender-div select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+/* تنسيق الأزرار */
+.edit-button,
+.save-info-button {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    /* محاذاة إلى اليسار */
+    margin-top: 20px;
+}
+
+.edit-button .MuiButton-root,
+.save-info-button .MuiButton-root {
+    padding: 8px 20px;
+    font-size: 22px;
+    border-radius: 25px;
+    text-transform: none;
+    transition: background-color 0.3s;
+}
+
+.edit-button .MuiButton-contained,
+.save-info-button .MuiButton-contained {
+    background-color: #6c63ff;
+    /* لون مشابه للصورة */
+    color: white;
+}
+
+.edit-button .MuiButton-contained:hover,
+.save-info-button .MuiButton-contained:hover {
+    background-color: #554bff;
+}
+
+.save-info-button .MuiButton-outlined {
+    border-color: #6c63ff;
+    color: #6c63ff;
+}
+
+.save-info-button .MuiButton-outlined:hover {
+    background-color: #f0f0ff;
+}
+
+/* رسالة الخطأ */
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 600px) {
+    .myprofile-main-div {
+        margin: 20px 10px;
+    }
+
+    .user-name {
+        font-size: 20px;
+    }
+
+    .user-name-input {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .user-email-div,
+    .user-address-div,
+    .user-gender-div,
+    .user-birthday-div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .user-email-div p,
+    .user-address-div p,
+    .user-gender-div p,
+    .user-birthday-div p {
+        width: auto;
+    }
+
+    .user-address-div input,
+    .user-gender-div select,
+    .user-birthday-div input {
+        max-width: 100%;
+    }
+
+    .edit-button .MuiButton-root,
+    .save-info-button .MuiButton-root {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
 }

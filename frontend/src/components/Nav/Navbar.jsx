@@ -1,17 +1,24 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import { assets } from '../../assets/assets'
 import './Navbar.css'
 import { Typography } from '@mui/material';
+import { AppContext } from '../../context/AppContext';
 
 function Navbar() {
 
 
+    const { authHeader } = useContext(AppContext)
+
     const navigate = useNavigate();
 
     const [showMenu, setShowMenu] = useState(false)
-    const [token, setToken] = useState(true)
+
+    const deleteToken = () => {
+        localStorage.removeItem('token');
+        navigate('/login')
+    }
 
     const setActiveClass = () => {
         document.querySelectorAll(".listItem").forEach(item => {
@@ -52,7 +59,7 @@ function Navbar() {
             </div>
             <div className='sign-login'>
                 {
-                    token
+                    authHeader
                         ? <div className='profile-pic-div'>
                             <img className='profile-pic' src={assets.profile_pic} alt='...' />
                             <img className='dropdown-icon' src={assets.dropdown_icon} alt='...' />
@@ -60,7 +67,7 @@ function Navbar() {
                                 <div className='list-s-div'>
                                     <p onClick={() => navigate('my-profile')} className='my-profile'>My Profile</p>
                                     <p onClick={() => navigate('my-appointments')} className='my-appointments'>My Appointments</p>
-                                    <p onClick={() => setToken(false)} className='logout'>logout</p>
+                                    <p onClick={() => deleteToken()} className='logout'>logout</p>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import './AllAppointments.css'
+
 
 const AllAppointments = () => {
   return (

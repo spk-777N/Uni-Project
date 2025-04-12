@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './DoctorsList.css'
 import { AdminContext } from '../../../context/AdminContext'
 import { assets } from '../../../../../frontend/src/assets/assets'
-import { Button } from '@mui/material'
-import { toast } from 'react-toastify'
-import axios from 'axios'
+// import { Button } from '@mui/material'
+// import { toast } from 'react-toastify'
+// import axios from 'axios'
 
 
 const DoctorsList = () => {
@@ -20,7 +20,10 @@ const DoctorsList = () => {
     return (
         <div className='doctors-list-main-div'>
             <p className='doctors-list-title'>All Doctors</p>
+
             <div className='doctors-list-div'>
+
+                {/* this for after fetching data from backend */}
                 {
                     doctors.map((item, index) => {
                         <div className='doctor-card' key={index}>
@@ -36,6 +39,8 @@ const DoctorsList = () => {
                         </div>
                     })
                 }
+                {/* ------- */}
+
                 <div className='doctor-card'>
                     <img src={assets.doc1} />
                     <div className='doc-name-speciality'>

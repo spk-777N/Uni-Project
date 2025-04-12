@@ -11,14 +11,17 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import MyProfile from './pages/MyProfile/MyProfile';
 import MyAppointments from './pages/MyAppointments/MyAppointments';
+import { ToastContainer } from 'react-toastify';
 
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/sign-up" element={<Sign_up />} />
         <Route path="/login" element={<Login />} />
         <Route path='/doctors' element={<Doctors />} />
@@ -29,7 +32,6 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/my-profile' element={<MyProfile />} />
         <Route path='/my-appointments' element={<MyAppointments />} />
-
         <Route path="/google" />
       </Routes>
       <Footer />

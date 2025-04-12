@@ -4,7 +4,7 @@ import './AddDoctors.css'
 import { Button } from '@mui/material'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-import { AdminContext } from '../../../context/AdminContext'
+// import { AdminContext } from '../../../context/AdminContext'
 
 const AddDoctors = () => {
 
@@ -23,10 +23,6 @@ const AddDoctors = () => {
   const [address, setAddress] = useState("")
 
 
-
-
-  // can delete following functions
-  // const { backendUrl, aToken } = useContext()
 
   const onSubmitHandler = async (event) => {
     event.preventDefault()
@@ -56,8 +52,8 @@ const AddDoctors = () => {
         console.log(`${key} : ${value}`);
       })
 
-      const { authHeader } = useContext(AdminContext)
-      const { data } = await axios.post('http://localhost:5173/admin-dashboard', formData, { headers: {  authHeader} })
+      // const { authHeader } = useContext(AdminContext)   , formData, { headers: { authHeader } }
+      const { data } = await axios.post('http://localhost:3000/admin/doctors/addDoctor')
 
       if (data.success) {
         toast.success(data.message)
