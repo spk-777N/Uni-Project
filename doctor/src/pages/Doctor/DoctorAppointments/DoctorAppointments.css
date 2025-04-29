@@ -1,32 +1,96 @@
-form {
-    margin: 20px;
-    width: 70%;
+.doctor-appointments-div {
+    width: 100%;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
 }
 
 .title-p {
-    margin-bottom: 40px;
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.doctor-appointments-div {
-    height: 75%;
-    width: 100%;
-    background-color: white;
-    padding: 20px 20px 20px 30px;
+.all-appointments-section {
     border: solid 1px gray;
-    border-radius: 10px;
-    overflow-y: scroll;
-    width: 350%;
+    background-color: white;
+    border-radius: 5px;
 }
 
-hr {
-    color: rgb(171, 171, 171);
+.key-div,
+.appointment-row {
+    display: grid;
+    grid-template-columns: 150px 220px 160px 150px 300px 150px 150px;
+    gap: 15px;
+    padding: 0px 30px;
+    align-items: center;
 }
 
 .key-div {
+    font-weight: 600;
+    margin-top: -10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-bottom: 2px solid black;
+    font-size: 23px;
+}
+
+.appointment-row {
+    border-bottom: 1px solid #cacaca;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    transition: background-color 0.2s;
+    font-size: 24px;
+}
+
+.appointment-row:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.appointment-row p {
+    margin: 0;
+    text-align: left;
+}
+
+button {
+    padding: 6px 0px;
+    width: 130px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+
+.cancel-complete-btn {
     display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    margin: 0 20px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.complete-btn {
+    justify-content: center;
+    background-color: white;
+    color: rgb(3, 216, 3);
+    font-weight: 600;
+    border: solid 2px;
+}
+
+.complete-btn:hover {
+    background-color: rgb(3, 216, 3);
+    color: white;
+}
+
+
+.cancel-btn {
+    background-color: white;
+    color: red;
+    justify-content: center;
+    font-weight: 600;
+    border: solid 2px;
+}
+
+.cancel-btn:hover {
+    background-color: red;
+    color: white;
 }

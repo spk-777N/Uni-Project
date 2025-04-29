@@ -1,0 +1,158 @@
+.profile-container {
+    margin-top: 15px;
+}
+
+.profile-display img,
+.profile-form img {
+    background-color: rgb(97, 97, 254);
+    border-radius: 50%;
+    width: 300px;
+}
+
+.profile-form img:hover {
+    cursor: pointer;
+}
+
+
+.doc-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.details-div {
+    margin-top: 20px;
+    display: flex;
+    gap: 100px;
+    font-size: 20px;
+}
+
+.form-details {
+    margin-top: 20px;
+    display: flex;
+    width: 80%;
+    gap: 100px;
+    font-size: 20px;
+}
+
+.edit-work-times {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-work-times select,
+input {
+    font-size: 20px;
+    border: solid gray 1px;
+    border-radius: 5px;
+
+}
+
+.edit-work-times select {
+    width: 50%;
+    text-align: center;
+}
+
+.edit-work-times input {
+    font-size: 20px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+    width: 32%;
+}
+
+
+.field-name {
+    font-weight: 600;
+}
+
+.left-side,
+.right-side,
+.doctor-appointments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-field-name {
+    font-size: 20px;
+}
+
+
+.edit-button,
+.save-info-button {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    /* محاذاة إلى اليسار */
+    margin-top: 20px;
+}
+
+.edit-button button {
+    font-size: 20px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.save-info-button button {
+    font-size: 18px;
+    width: 350px;
+    border-radius: 50px;
+}
+
+.about-field-name {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-right-side,
+.form-left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-right-side input,
+.form-left-side input {
+    font-size: 20px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.experience-list {
+    font-size: 20px;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.form-location {
+    font-size: 20px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form-fees {
+    width: 90px;
+}
+
+.form-about {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.form-about textarea {
+    margin-top: 5px;
+    font-size: 20px;
+    width: 600px;
+    height: 100px;
+    border-color: gray;
+    border-radius: 5px;
+}

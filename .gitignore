@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment files (sensitive variables)
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+.temp/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# System files
+.DS_Store
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Testing
+coverage/

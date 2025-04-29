@@ -39,7 +39,7 @@ const Sidebar = () => {
 
             <NavLink className='nav-link' to={'/doctor-profile'}>
               <img src={assets.people_icon} alt='...' />
-              <p>Docters List</p>
+              <p>Profile</p>
             </NavLink>
           </Fragment>
         }

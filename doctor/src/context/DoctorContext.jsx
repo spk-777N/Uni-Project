@@ -13,7 +13,7 @@ const DoctorContextProvider = (props) => {
     const [authHeader, setAuthHeader] = useState(localStorage.getItem('token') || '');
 
 
-    get Appointments
+    // get Appointments
     const [appointments, setAppointments] = useState([])
     const getAppointments = async () => {
         try {
